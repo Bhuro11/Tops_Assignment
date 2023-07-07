@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <title> Login </title>
+</head>
+<body>
+    <a href="Assignment.html" style="font-size: 30px; margin: 20px;">Home</a>
+     <div class="form">
+        <div class="form2">
+            <h1> Login Here </h1>
+            <form id="form1" runat="server">
+                    <input type="text" id="txtunm" placeholder="Enter User Name"/>
+                    <br/>
+                    <input type="password" id="txtpwd" placeholder="Enter Password"/>
+                    <br/>
+                   <div class="check"> <input type="checkbox" id="CheckBox1" /> Show Password </div>
+                    <br/><br/>
+                <Button id="btnlogin" Text="Login" > Login </Button>
+                   <div class="span"> <span> New User ? <a href="registration.html"> Register Now </a></span></div>
+            </form>
+        </div>
+    </div>
+    <style>
+        a{
+        border: 1px outset red;
+        background-color: red;
+        color: white;
+        padding: 4px 14px;
+        border-radius: 10px;
+        transition: 0.5s ease-in;
+         }
+        a:hover{
+        background-color: white;
+        color: red;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form{
+            background-color: red;
+            width: 50vh;
+            height: 45vh;
+            margin: 150px;
+            border-radius: 20px;
+        }
+        .form2{
+            margin-top: 20px;
+        }
+        h1{
+            padding: 0px 80px;
+            margin: 0px 15px;
+            font-size: 25px;
+            color: white;
+            text-decoration: underline;
+        }
+        #txtunm, #txtpwd{
+            font-size:   15px;
+            padding: 5px 14px;
+            margin: 10px 70px;
+        }
+        .check{
+            margin: 5px 70px;
+        }
+        .span{
+            margin-left: 87px;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        #btnlogin{
+            font-size: 20px;
+            padding: 5px 8px;
+            border-radius: 10px;
+            color: yellow;
+            background-color: green;
+            margin-left: 140px;
+            margin-top: -11px;
+        }
+    </style>
+    <script>
+        document.getElementById('CheckBox1').onclick = function () {
+            if (this.checked) {
+                document.getElementById('txtpwd').type = "text";
+            }
+            else {
+                document.getElementById('txtpwd').type = "password";
+            }
+        }   
+        
+    </script>
+</body>
+</html>
